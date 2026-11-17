@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZEN DESIGN | Creative Graphic Designer & Visual Identity</title>
+    <meta name="description" content="MAZEN DESIGN - مصمم جرافيك محترف متخصص في تصميم الشعارات، الهويات البصرية، أغلفة الكتب والمذكرات التعليمية، وإعلانات السوشيال ميديا.">
+    <meta name="keywords" content="MAZEN DESIGN, Graphic Designer, Logo Design, Book Covers, Brand Identity, تصميم جرافيك, تصميم شعارات, أغلفة كتب, مذكرات تعليمية">
+    <meta name="author" content="Mazen Design">
+    
+    <!-- Google Fonts: Cairo & Tajawal (Arabic) + Syne & Plus Jakarta Sans (English) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 for crisp icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0A0A0C',
+                        charcoal: '#121216',
+                        slateDark: '#1A1A22',
+                        skyElectric: '#0EA5E9',
+                        skyGlow: '#38BDF8',
+                    },
+                    fontFamily: {
+                        ar: ['Cairo', 'Tajawal', 'sans-serif'],
+                        en: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Syne', 'Cairo', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 18s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-14px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar & Smooth Glass Aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0EA5E9;
+        }
+
+        body {
+            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        html[dir="ltr"] body {
+            font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+        }
+
+        .font-brand {
+            font-family: 'Syne', 'Cairo', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .dark .glass-card {
+            background: rgba(18, 18, 22, 0.68);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+        }
+
+        .dark .glass-nav {
+            background: rgba(10, 10, 12, 0.80);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .sky-gradient-text {
+            background: linear-gradient(135deg, #0EA5E9 0%, #38BDF8 50%, #7DD3FC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-glow {
+            box-shadow: 0 0 80px -15px rgba(14, 165, 233, 0.45);
+        }
+
+        .project-card-hover {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .project-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 22px 40px -15px rgba(14, 165, 233, 0.25);
+        }
+
+        /* Hide scrollbars on horizontal pill tabs */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+        .animate-fadeIn { animation: fadeIn .3s ease both; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-obsidian dark:text-white transition-colors duration-300 selection:bg-skyElectric selection:text-white">
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-5 left-5 z-[100] flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <header class="fixed top-0 inset-x-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <!-- Brand Logo (4 Rapid Clicks Trigger Admin Login) -->
+            <a href="#home" id="header-brand-logo" class="flex items-center gap-3 group select-none">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-skyElectric to-skyGlow flex items-center justify-center text-white font-brand font-extrabold text-xl shadow-lg shadow-skyElectric/30 group-hover:scale-105 transition-transform">
+                    M
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-brand font-extrabold text-lg sm:text-xl tracking-wider text-slate-900 dark:text-white leading-none">
+                        MAZEN <span class="text-skyElectric">DESIGN</span>
+                    </span>
+                    <span class="text-[10px] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400 font-en mt-1">
+                        Graphic Studio
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold">
+                <a href="#home" data-i18n="nav_home" class="hover:text-skyElectric transition-colors">الرئيسية</a>
+                <a href="#projects" data-i18n="nav_projects" class="hover:text-skyElectric transition-colors">أعمالي</a>
+                <a href="#about" data-i18n="nav_about" class="hover:text-skyElectric transition-colors">عني</a>
+                <a href="#services" data-i18n="nav_services" class="hover:text-skyElectric transition-colors">خدماتي</a>
+                <a href="#testimonials" data-i18n="nav_testimonials" class="hover:text-skyElectric transition-colors">آراء العملاء</a>
+                <a href="#contact" data-i18n="nav_contact" class="hover:text-skyElectric transition-colors">تواصل معي</a>
+            </nav>
+
+            <!-- Action Controls: Lang, Theme, Mobile Menu -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <!-- Language Toggle -->
+                <button id="lang-toggle" title="Switch Language" class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-white/10 hover:border-skyElectric dark:hover:border-skyElectric bg-white/60 dark:bg-white/5 transition-all flex items-center gap-1.5">
+                    <i class="fa-solid fa-globe text-skyElectric"></i>
+                    <span id="lang-label">EN</span>
+                </button>
+
+                <!-- Dark/Light Theme Toggle -->
+                <button id="theme-toggle" title="Toggle Dark/Light Mode" class="w-10 h-10 rounded-xl border border-slate-200 dark:border-white/10 hover:border-skyElectric dark:hover:border-skyElectric bg-white/60 dark:bg-white/5 flex items-center justify-center transition-all text-slate-700 dark:text-skyGlow">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                </button>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 rounded-xl border border-slate-200 dark:border-white/10 flex items-center justify-center text-lg">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Nav -->
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-6 pt-2 border-t border-slate-200/60 dark:border-white/10 bg-white/95 dark:bg-obsidian/95 backdrop-blur-xl">
+            <div class="flex flex-col gap-3 text-sm font-semibold">
+                <a href="#home" data-i18n="nav_home" class="mobile-link py-2 hover:text-skyElectric">الرئيسية</a>
+                <a href="#projects" data-i18n="nav_projects" class="mobile-link py-2 hover:text-skyElectric">أعمالي</a>
+                <a href="#about" data-i18n="nav_about" class="mobile-link py-2 hover:text-skyElectric">عني</a>
+                <a href="#services" data-i18n="nav_services" class="mobile-link py-2 hover:text-skyElectric">خدماتي</a>
+                <a href="#testimonials" data-i18n="nav_testimonials" class="mobile-link py-2 hover:text-skyElectric">آراء العملاء</a>
+                <a href="#contact" data-i18n="nav_contact" class="mobile-link py-2 hover:text-skyElectric">تواصل معي</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN VISITOR VIEW ==================== -->
+    <main id="visitor-view">
+
+        <!-- 1. HERO SECTION -->
+        <section id="home" class="relative min-h-screen pt-28 pb-20 flex items-center overflow-hidden">
+            <!-- Interactive Particle Mesh Canvas -->
+            <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-65 dark:opacity-80"></canvas>
+            
+            <!-- Ambient Sky Blue Glow Orbs -->
+            <div class="absolute top-1/4 -right-24 w-96 h-96 bg-skyElectric/20 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-10 -left-24 w-80 h-80 bg-skyGlow/15 rounded-full blur-[110px] pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left/Start Text Column -->
+                    <div class="lg:col-span-7 text-center lg:text-start space-y-6">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card text-xs font-bold tracking-wide text-skyElectric border border-skyElectric/30">
+                            <span class="w-2 h-2 rounded-full bg-skyElectric animate-ping"></span>
+                            <span id="hero-badge" data-i18n="hero_badge">متاح لاستقبال مشاريع التصميم الجديدة</span>
+                        </div>
+
+                        <div class="space-y-2">
+                            <p class="font-brand text-sm sm:text-base font-bold tracking-[0.28em] uppercase text-slate-500 dark:text-slate-400">
+                                MAZEN DESIGN STUDIO
+                            </p>
+                            <h1 class="font-brand text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.12]">
+                                <span class="block text-slate-900 dark:text-white">MAZEN <span class="sky-gradient-text">DESIGN</span></span>
+                                <span id="hero-headline" class="block text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-200 mt-3 font-en">
+                                    Creative Graphic Designer
+                                </span>
+                            </h1>
+                        </div>
+
+                        <p id="hero-bio" class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            أحوّل الأفكار إلى تجارب بصرية استثنائية تخطف الأنظار. متخصص في بناء الهويات البصرية المتكاملة، تصميم الشعارات الاحترافية، أغلفة الكتب والمذكرات التعليمية، وإعلانات السوشيال ميديا بأسلوب يجمع بين الفخامة والبساطة.
+                        </p>
+
+                        <!-- Hero CTA Buttons -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#projects" class="px-8 py-4 rounded-2xl bg-skyElectric hover:bg-skyGlow text-white font-bold text-sm sm:text-base shadow-xl shadow-skyElectric/30 hover:shadow-skyElectric/50 transition-all flex items-center gap-3 group">
+                                <span data-i18n="hero_cta_work">استكشف أعمالي</span>
+                                <i class="fa-solid fa-arrow-left rtl:rotate-0 ltr:rotate-180 group-hover:-translate-x-1 transition-transform"></i>
+                            </a>
+                            <a href="#contact" class="px-8 py-4 rounded-2xl glass-card hover:border-skyElectric font-bold text-sm sm:text-base transition-all flex items-center gap-3">
+                                <i class="fa-regular fa-paper-plane text-skyElectric"></i>
+                                <span data-i18n="hero_cta_contact">تواصل معي</span>
+                            </a>
+                        </div>
+
+                        <!-- Quick Stats Strip -->
+                        <div class="grid grid-cols-3 gap-4 pt-6 max-w-lg mx-auto lg:mx-0 border-t border-slate-200/70 dark:border-white/10">
+                            <div>
+                                <div id="stat-projects-hero" class="font-brand text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">+150</div>
+                                <div data-i18n="stat_projects" class="text-xs text-slate-500 dark:text-slate-400">مشروع مكتمل</div>
+                            </div>
+                            <div>
+                                <div id="stat-clients-hero" class="font-brand text-2xl sm:text-3xl font-extrabold text-skyElectric">+95</div>
+                                <div data-i18n="stat_clients" class="text-xs text-slate-500 dark:text-slate-400">عميل سعيد</div>
+                            </div>
+                            <div>
+                                <div id="stat-years-hero" class="font-brand text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">+5</div>
+                                <div data-i18n="stat_years" class="text-xs text-slate-500 dark:text-slate-400">سنوات خبرة</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right/End Designer Avatar & Floating Showcase Card -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-72 h-72 sm:w-96 sm:h-96 animate-float">
+                            <!-- Outer Rotating Geometric Ring -->
+                            <div class="absolute inset-0 rounded-[2.5rem] border-2 border-dashed border-skyElectric/40 animate-spin-slow"></div>
+                            
+                            <!-- Main Luxury Monogram / Avatar Container -->
+                            <div class="relative w-full h-full rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-charcoal to-black border border-white/15 hero-glow overflow-hidden flex flex-col items-center justify-center p-6">
+                                <!-- Bespoke SVG Designer Portrait / Creative Emblem -->
+                                <svg viewBox="0 0 320 320" class="w-full h-full">
+                                    <defs>
+                                        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#0EA5E9"/>
+                                            <stop offset="100%" stop-color="#38BDF8"/>
+                                        </linearGradient>
+                                        <radialGradient id="glowBg" cx="50%" cy="45%" r="50%">
+                                            <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.32"/>
+                                            <stop offset="100%" stop-color="#0A0A0C" stop-opacity="0"/>
+                                        </radialGradient>
+                                    </defs>
+                                    <circle cx="160" cy="150" r="135" fill="url(#glowBg)"/>
+                                    <!-- Grid Lines -->
+                                    <g stroke="#38BDF8" stroke-opacity="0.14" stroke-width="1">
+                                        <line x1="40" y1="80" x2="280" y2="80"/>
+                                        <line x1="40" y1="160" x2="280" y2="160"/>
+                                        <line x1="40" y1="240" x2="280" y2="240"/>
+                                        <line x1="80" y1="40" x2="80" y2="280"/>
+                                        <line x1="160" y1="40" x2="160" y2="280"/>
+                                        <line x1="240" y1="40" x2="240" y2="280"/>
+                                    </g>
+                                    <!-- Stylized Bezier Pen Nib & M Monogram -->
+                                    <polygon points="160,42 222,145 190,192 130,192 98,145" fill="none" stroke="url(#skyGrad)" stroke-width="3.5"/>
+                                    <circle cx="160" cy="130" r="12" fill="#0EA5E9"/>
+                                    <line x1="160" y1="42" x2="160" y2="118" stroke="#38BDF8" stroke-width="2.5"/>
+                                    <!-- Bezier Handles -->
+                                    <line x1="75" y1="75" x2="245" y2="75" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.5"/>
+                                    <rect x="70" y="70" width="10" height="10" fill="#0EA5E9"/>
+                                    <rect x="240" y="70" width="10" height="10" fill="#0EA5E9"/>
+                                    <circle cx="160" cy="75" r="5" fill="#FFFFFF"/>
+                                    <!-- Brand Typography inside Emblem -->
+                                    <text x="160" y="236" text-anchor="middle" fill="#FFFFFF" font-family="Syne, sans-serif" font-weight="800" font-size="26" letter-spacing="3">MAZEN</text>
+                                    <text x="160" y="262" text-anchor="middle" fill="#38BDF8" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="11" letter-spacing="6">DESIGN</text>
+                                </svg>
+                            </div>
+
+                            <!-- Floating Tool Badges -->
+                            <div class="absolute -top-4 -right-4 px-4 py-2.5 rounded-2xl glass-card shadow-xl flex items-center gap-2 border border-skyElectric/30">
+                                <span class="w-7 h-7 rounded-lg bg-[#001E36] text-[#31A8FF] font-bold text-xs flex items-center justify-center border border-[#31A8FF]/40">Ps</span>
+                                <span class="text-xs font-bold">Photoshop</span>
+                            </div>
+                            <div class="absolute -bottom-4 -left-4 px-4 py-2.5 rounded-2xl glass-card shadow-xl flex items-center gap-2 border border-skyElectric/30">
+                                <span class="w-7 h-7 rounded-lg bg-[#330000] text-[#FF9A00] font-bold text-xs flex items-center justify-center border border-[#FF9A00]/40">Ai</span>
+                                <span class="text-xs font-bold">Illustrator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MY PROJECTS (PORTFOLIO GALLERY) -->
+        <section id="projects" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-[0.25em] text-skyElectric block mb-2" data-i18n="projects_sub">معرض الإبداع</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white" data-i18n="projects_title">
+                            أحدث أعمالي ومشاريعي
+                        </h2>
+                    </div>
+
+                    <!-- Live Search Input -->
+                    <div class="relative w-full md:w-80">
+                        <i class="fa-solid fa-magnifying-glass absolute top-1/2 -translate-y-1/2 right-4 rtl:right-4 ltr:left-4 text-slate-400 text-sm"></i>
+                        <input id="project-search" type="text" placeholder="ابحث عن مشروع أو تصميم..." data-i18n-placeholder="search_placeholder"
+                            class="w-full py-3.5 pr-11 pl-4 rtl:pr-11 rtl:pl-4 ltr:pl-11 ltr:pr-4 rounded-2xl glass-card text-sm focus:outline-none focus:border-skyElectric transition-all">
+                    </div>
+                </div>
+
+                <!-- Dynamic Category Filter Tabs -->
+                <div id="category-filters" class="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-4 mb-10">
+                    <!-- Populated dynamically via JS -->
+                </div>
+
+                <!-- Projects Grid -->
+                <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project cards rendered dynamically -->
+                </div>
+
+                <!-- Empty Search State -->
+                <div id="projects-empty" class="hidden text-center py-20 glass-card rounded-3xl">
+                    <i class="fa-regular fa-folder-open text-4xl text-skyElectric mb-3"></i>
+                    <p class="text-lg font-bold" data-i18n="no_projects">لا توجد مشاريع مطابقة لبحثك حاليًا</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ABOUT ME SECTION -->
+        <section id="about" class="py-24 bg-slate-100/70 dark:bg-charcoal/60 border-y border-slate-200/60 dark:border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <!-- Left Visual / Experience Card -->
+                    <div class="lg:col-span-5">
+                        <div class="glass-card rounded-3xl p-8 relative overflow-hidden border border-skyElectric/20">
+                            <div class="absolute -top-16 -left-16 w-44 h-44 bg-skyElectric/20 rounded-full blur-2xl"></div>
+                            <div class="relative space-y-6">
+                                <div class="w-16 h-16 rounded-2xl bg-skyElectric/15 text-skyElectric flex items-center justify-center text-3xl">
+                                    <i class="fa-solid fa-pen-nib"></i>
+                                </div>
+                                <h3 class="text-2xl font-extrabold" data-i18n="about_card_title">شغف بالتفاصيل ودقة في التنفيذ</h3>
+                                <p id="about-description" class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                                    أنا مازن، مصمم جرافيك شغوف بصناعة الهويات البصرية المميزة والتصاميم الإعلانية والتعليمية الاحترافية. أؤمن بأن التصميم الجيد ليس مجرد ألوان وأشكال، بل هو رسالة بصرية ذكية تترك انطباعًا لا يُنسى لدى الجمهور وتساعد العلامات التجارية والمؤلفين والمعلمين على التميز.
+                                </p>
+                                <div class="grid grid-cols-2 gap-4 pt-2">
+                                    <div class="p-4 rounded-2xl bg-white/70 dark:bg-obsidian/70 border border-slate-200/60 dark:border-white/5">
+                                        <span class="text-skyElectric font-brand font-extrabold text-2xl block">100%</span>
+                                        <span class="text-xs text-slate-500 dark:text-slate-400" data-i18n="about_quality">جودة طباعة ورقمية</span>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-white/70 dark:bg-obsidian/70 border border-slate-200/60 dark:border-white/5">
+                                        <span class="text-skyElectric font-brand font-extrabold text-2xl block">24/7</span>
+                                        <span class="text-xs text-slate-500 dark:text-slate-400" data-i18n="about_support">التزام بالمواعيد</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Tools & Skills -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-[0.25em] text-skyElectric block mb-2" data-i18n="about_sub">من أنا ومهاراتي</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold" data-i18n="about_title">الأدوات والخبرات الإبداعية</h2>
+                        </div>
+
+                        <!-- Software & Tools Cards -->
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <!-- Adobe Photoshop -->
+                            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 hover:border-skyElectric/50 transition-all">
+                                <div class="w-14 h-14 rounded-2xl bg-[#001E36] text-[#31A8FF] font-brand font-extrabold text-xl flex items-center justify-center shrink-0 border border-[#31A8FF]/30">
+                                    Ps
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center mb-1.5">
+                                        <h4 class="font-bold text-sm">Adobe Photoshop</h4>
+                                        <span class="text-xs font-bold text-skyElectric">98%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                                        <div class="h-full bg-skyElectric rounded-full" style="width: 98%"></div>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1.5">الدمج الإبداعي، السوشيال ميديا، وتعديل الصور</p>
+                                </div>
+                            </div>
+
+                            <!-- Adobe Illustrator -->
+                            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 hover:border-skyElectric/50 transition-all">
+                                <div class="w-14 h-14 rounded-2xl bg-[#330000] text-[#FF9A00] font-brand font-extrabold text-xl flex items-center justify-center shrink-0 border border-[#FF9A00]/30">
+                                    Ai
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center mb-1.5">
+                                        <h4 class="font-bold text-sm">Adobe Illustrator</h4>
+                                        <span class="text-xs font-bold text-skyElectric">96%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                                        <div class="h-full bg-skyElectric rounded-full" style="width: 96%"></div>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1.5">تصميم الشعارات، الفيكتور، والهويات البصرية</p>
+                                </div>
+                            </div>
+
+                            <!-- Canva Pro -->
+                            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 hover:border-skyElectric/50 transition-all">
+                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#00C4CC] to-[#7D2AE8] text-white font-brand font-extrabold text-xl flex items-center justify-center shrink-0">
+                                    Cv
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center mb-1.5">
+                                        <h4 class="font-bold text-sm">Canva Creative Suite</h4>
+                                        <span class="text-xs font-bold text-skyElectric">95%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                                        <div class="h-full bg-skyElectric rounded-full" style="width: 95%"></div>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1.5">العروض التقديمية والقوالب السريعة الاحترافية</p>
+                                </div>
+                            </div>
+
+                            <!-- Creative Direction & Typography -->
+                            <div class="glass-card p-5 rounded-2xl flex items-center gap-4 hover:border-skyElectric/50 transition-all">
+                                <div class="w-14 h-14 rounded-2xl bg-skyElectric/15 text-skyElectric text-xl flex items-center justify-center shrink-0 border border-skyElectric/30">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-center mb-1.5">
+                                        <h4 class="font-bold text-sm" data-i18n="skill_branding">التايبوجرافي والهوية</h4>
+                                        <span class="text-xs font-bold text-skyElectric">94%</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                                        <div class="h-full bg-skyElectric rounded-full" style="width: 94%"></div>
+                                    </div>
+                                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1.5">تنسيق الخطوط، نظرية الألوان، وتجهيز المطبوعات</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. MY SERVICES SECTION -->
+        <section id="services" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-skyElectric block mb-2" data-i18n="services_sub">ماذا أقدم لك؟</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold mb-4" data-i18n="services_title">خدماتي الإبداعية</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base" data-i18n="services_desc">
+                        حلول تصميمية متكاملة مصممة خصيصًا لرفع قيمة علامتك التجارية وجذب جمهورك المستهدف بأعلى معايير الجودة.
+                    </p>
+                </div>
+
+                <!-- Services Grid -->
+                <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CLIENT TESTIMONIALS SECTION -->
+        <section id="testimonials" class="py-24 bg-slate-100/70 dark:bg-charcoal/60 border-y border-slate-200/60 dark:border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-xs font-bold uppercase tracking-[0.25em] text-skyElectric block mb-2" data-i18n="testimonials_sub">شركاء النجاح</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold mb-4" data-i18n="testimonials_title">آراء وتقييمات العملاء</h2>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACT SECTION -->
+        <section id="contact" class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-[2.5rem] p-8 sm:p-12 lg:p-16 border border-skyElectric/20 relative overflow-hidden">
+                    <div class="absolute -bottom-24 -right-24 w-80 h-80 bg-skyElectric/15 rounded-full blur-3xl pointer-events-none"></div>
+                    
+                    <div class="grid lg:grid-cols-12 gap-12 items-start relative z-10">
+                        <!-- Contact Details Column -->
+                        <div class="lg:col-span-5 space-y-8">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-[0.25em] text-skyElectric block mb-2" data-i18n="contact_sub">ابدأ مشروعك الآن</span>
+                                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" data-i18n="contact_title">لنتعاون معًا في تصميمك القادم</h2>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed" data-i18n="contact_desc">
+                                    هل لديك فكرة مشروع أو تحتاج إلى هوية بصرية أو غلاف كتاب مميز؟ تواصل معي مباشرة عبر الواتساب أو البريد الإلكتروني.
+                                </p>
+                            </div>
+
+                            <!-- Direct Contact Cards -->
+                            <div class="space-y-4">
+                                <a id="contact-phone-link" href="tel:01144341455" class="flex items-center gap-4 p-4 rounded-2xl bg-white/70 dark:bg-obsidian/70 hover:border-skyElectric border border-slate-200/60 dark:border-white/10 transition-all group">
+                                    <div class="w-12 h-12 rounded-xl bg-skyElectric/15 text-skyElectric flex items-center justify-center text-lg group-hover:bg-skyElectric group-hover:text-white transition-colors">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-slate-500 dark:text-slate-400 block" data-i18n="contact_phone_label">رقم الهاتف</span>
+                                        <span id="contact-phone-text" class="font-brand font-bold text-base tracking-wider" dir="ltr">01144341455</span>
+                                    </div>
+                                </a>
+
+                                <a id="contact-email-link" href="mailto:mmmk81667@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl bg-white/70 dark:bg-obsidian/70 hover:border-skyElectric border border-slate-200/60 dark:border-white/10 transition-all group">
+                                    <div class="w-12 h-12 rounded-xl bg-skyElectric/15 text-skyElectric flex items-center justify-center text-lg group-hover:bg-skyElectric group-hover:text-white transition-colors">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-slate-500 dark:text-slate-400 block" data-i18n="contact_email_label">البريد الإلكتروني</span>
+                                        <span id="contact-email-text" class="font-en font-bold text-sm sm:text-base">mmmk81667@gmail.com</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Direct WhatsApp CTA -->
+                            <a id="contact-whatsapp-btn" href="https://wa.me/201144341455?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20MAZEN%20DESIGN%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%B5%D9%85%D9%8A%D9%85." target="_blank" rel="noopener noreferrer"
+                                class="w-full py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-base flex items-center justify-center gap-3 shadow-lg shadow-[#25D366]/25 transition-all">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <span data-i18n="contact_whatsapp">تواصل مباشر عبر واتساب</span>
+                            </a>
+
+                            <!-- Social Links -->
+                            <div class="flex items-center gap-3 pt-2">
+                                <a id="social-behance" href="https://www.behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance" class="w-11 h-11 rounded-xl glass-card hover:bg-skyElectric hover:text-white flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-behance"></i>
+                                </a>
+                                <a id="social-instagram" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-11 h-11 rounded-xl glass-card hover:bg-skyElectric hover:text-white flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                <a id="social-facebook" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-11 h-11 rounded-xl glass-card hover:bg-skyElectric hover:text-white flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a id="social-linkedin" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-11 h-11 rounded-xl glass-card hover:bg-skyElectric hover:text-white flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Inquiry Form -->
+                        <div class="lg:col-span-7">
+                            <form id="contact-form" class="p-6 sm:p-8 rounded-3xl bg-white/80 dark:bg-obsidian/80 border border-slate-200/70 dark:border-white/10 space-y-5">
+                                <h3 class="text-xl font-extrabold mb-2" data-i18n="form_title">أرسل تفاصيل مشروعك</h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-bold mb-2" data-i18n="form_name">الاسم الكامل</label>
+                                        <input type="text" id="msg-name" required placeholder="أدخل اسمك" class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-charcoal border border-slate-200 dark:border-white/10 text-sm focus:outline-none focus:border-skyElectric">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold mb-2" data-i18n="form_phone">رقم الهاتف / واتساب</label>
+                                        <input type="text" id="msg-phone" required placeholder="01xxxxxxxxx" class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-charcoal border border-slate-200 dark:border-white/10 text-sm focus:outline-none focus:border-skyElectric">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold mb-2" data-i18n="form_service">نوع التصميم المطلوب</label>
+                                    <select id="msg-service" class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-charcoal border border-slate-200 dark:border-white/10 text-sm focus:outline-none focus:border-skyElectric">
+                                        <option value="تصميم شعار وهوية بصرية">تصميم شعار وهوية بصرية</option>
+                                        <option value="تصميم أغلفة كتب ومذكرات">تصميم أغلفة كتب ومذكرات</option>
+                                        <option value="تصميم إعلانات وسوشيال ميديا">تصميم إعلانات وسوشيال ميديا</option>
+                                        <option value="تصميم مطبوعات ومنتجات">تصميم مطبوعات ومنتجات</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold mb-2" data-i18n="form_details">تفاصيل المشروع</label>
+                                    <textarea id="msg-details" rows="4" required placeholder="اشرح فكرة التصميم والمقاسات أو الملاحظات المطلوبة..." class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-charcoal border border-slate-200 dark:border-white/10 text-sm focus:outline-none focus:border-skyElectric"></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-4 rounded-2xl bg-skyElectric hover:bg-skyGlow text-white font-bold text-sm sm:text-base shadow-lg shadow-skyElectric/30 transition-all flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span data-i18n="form_submit">إرسال الطلب وحفظه</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="py-10 border-t border-slate-200/70 dark:border-white/10 text-center text-sm text-slate-500 dark:text-slate-400">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div id="footer-brand-logo" class="font-brand font-extrabold text-slate-900 dark:text-white tracking-wider cursor-pointer select-none">
+                    MAZEN <span class="text-skyElectric">DESIGN</span>
+                </div>
+                <p>© <span id="year-now"></span> MAZEN DESIGN. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <!-- ==================== MAZEN AI CHAT ==================== -->
+        <div class="fixed bottom-5 right-5 z-[70] flex flex-col items-end gap-3">
+            <div id="ai-chat-panel" class="hidden w-[calc(100vw-2.5rem)] sm:w-96 h-[30rem] max-h-[75vh] glass-card bg-white dark:bg-charcoal rounded-3xl border border-skyElectric/30 shadow-2xl flex flex-col overflow-hidden animate-fadeIn">
+                <div class="flex items-center justify-between gap-3 px-4 py-3 bg-gradient-to-br from-skyElectric to-skyGlow text-white">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center font-brand font-extrabold">M</div>
+                        <div>
+                            <div class="font-brand font-extrabold leading-none">Mazen AI</div>
+                            <div class="text-[11px] opacity-90 mt-1">مساعد مازن • متاح الآن</div>
+                        </div>
+                    </div>
+                    <button id="ai-chat-close" type="button" aria-label="إغلاق" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div id="ai-chat-log" class="flex-1 overflow-y-auto p-4 flex flex-col gap-3 text-sm"></div>
+                <div id="ai-chat-chips" class="px-4 pb-2 flex gap-2 overflow-x-auto no-scrollbar"></div>
+                <form id="ai-chat-form" class="p-3 border-t border-slate-200 dark:border-white/10 flex items-center gap-2">
+                    <input id="ai-chat-input" type="text" autocomplete="off" placeholder="اكتب سؤالك هنا..." class="flex-1 px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm focus:outline-none focus:border-skyElectric">
+                    <button type="submit" aria-label="إرسال" class="w-10 h-10 rounded-xl bg-skyElectric hover:bg-skyGlow text-white flex items-center justify-center shrink-0"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+            <button id="ai-chat-toggle" type="button" aria-label="الدردشة مع Mazen AI" class="h-14 px-5 rounded-full bg-skyElectric hover:bg-skyGlow text-white font-bold text-sm shadow-xl shadow-skyElectric/40 flex items-center gap-2.5 transition-all">
+                <i class="fa-solid fa-comments text-lg"></i>
+                <span>Mazen AI</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- ==================== PROJECT LIGHTBOX MODAL ==================== -->
+    <div id="project-lightbox" class="fixed inset-0 z-[80] hidden bg-black/90 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6">
+        <div class="relative w-full max-w-4xl bg-white dark:bg-charcoal rounded-3xl overflow-hidden border border-white/15 shadow-2xl animate-fadeIn">
+            <button id="close-lightbox" class="absolute top-4 left-4 z-20 w-10 h-10 rounded-full bg-black/60 text-white hover:bg-skyElectric flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="grid md:grid-cols-12">
+                <div class="md:col-span-7 bg-obsidian flex items-center justify-center max-h-[75vh] overflow-hidden">
+                    <img id="lightbox-img" src="" alt="Project Preview" class="w-full h-full object-contain">
+                </div>
+                <div class="md:col-span-5 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <span id="lightbox-cat" class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-skyElectric/15 text-skyElectric"></span>
+                        <h3 id="lightbox-title" class="text-2xl font-extrabold text-slate-900 dark:text-white"></h3>
+                        <p id="lightbox-desc" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 dark:border-white/10 space-y-3">
+                        <a id="lightbox-order-btn" href="https://wa.me/201144341455" target="_blank" class="w-full py-3.5 px-4 rounded-xl bg-skyElectric hover:bg-skyGlow text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span data-i18n="order_similar">اطلب تصميمًا مشابهًا</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== ADMIN LOGIN MODAL ==================== -->
+    <div id="admin-login-modal" class="fixed inset-0 z-[90] hidden bg-black/85 backdrop-blur-lg flex items-center justify-center p-4">
+        <div class="w-full max-w-md glass-card bg-white dark:bg-charcoal rounded-3xl p-8 border border-skyElectric/30 shadow-2xl relative">
+            <button id="close-login-modal" class="absolute top-5 left-5 w-9 h-9 rounded-full bg-slate-200/70 dark:bg-white/10 flex items-center justify-center hover:bg-skyElectric hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-14 h-14 rounded-2xl bg-skyElectric/15 text-skyElectric flex items-center justify-center text-2xl mx-auto mb-3">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold">لوحة تحكم MAZEN DESIGN</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">تسجيل دخول المدير لإدارة الأعمال والمحتوى</p>
+            </div>
+
+            <form id="admin-login-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold mb-1.5">البريد الإلكتروني للمدير</label>
+                    <input type="email" id="admin-email-input" value="mmmk81667@gmail.com" required class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm focus:outline-none focus:border-skyElectric" dir="ltr">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold mb-1.5">كلمة المرور</label>
+                    <input type="password" id="admin-pass-input" placeholder="••••••••" required class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm focus:outline-none focus:border-skyElectric" dir="ltr">
+                </div>
+                <p id="login-error-msg" class="hidden text-xs text-rose-500 font-bold"></p>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-skyElectric hover:bg-skyGlow text-white font-bold text-sm shadow-lg shadow-skyElectric/25 transition-all">
+                    تسجيل الدخول إلى لوحة التحكم
+                </button>
+            </form>
+
+            <div class="mt-5 pt-4 border-t border-slate-200 dark:border-white/10 text-center">
+                <p class="text-[11px] text-slate-500 dark:text-slate-400 mb-2">للتجربة الفورية أو الدخول السريع للمالك:</p>
+                <button id="quick-admin-access" type="button" class="text-xs font-bold text-skyElectric hover:underline">
+                    دخول سريع كمدير (MAZEN ADMIN) ←
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== PROTECTED ADMIN DASHBOARD VIEW ==================== -->
+    <section id="admin-dashboard-view" class="hidden min-h-screen pt-24 pb-16 bg-slate-100 dark:bg-obsidian">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Admin Header Bar -->
+            <div class="glass-card rounded-3xl p-6 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border border-skyElectric/30">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-skyElectric text-white flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl sm:text-2xl font-extrabold">لوحة تحكم MAZEN DESIGN</h1>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">إدارة كاملة للمشاريع، التصنيفات، الخدمات، آراء العملاء، وإعدادات الموقع</p>
+                        <span id="cloud-status" class="inline-block mt-2 px-3 py-1 rounded-full text-[11px] font-bold bg-amber-500/15 text-amber-500">جارٍ فحص الاتصال بقاعدة البيانات...</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-full sm:w-auto">
+                    <button id="back-to-site-btn" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl border border-slate-300 dark:border-white/15 text-xs font-bold hover:border-skyElectric transition-all">
+                        <i class="fa-solid fa-eye ml-1"></i> معاينة الموقع
+                    </button>
+                    <button id="admin-logout-btn" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-600 text-white text-xs font-bold transition-all">
+                        <i class="fa-solid fa-right-from-bracket ml-1"></i> تسجيل الخروج
+                    </button>
+                </div>
+            </div>
+
+            <!-- Analytics KPI Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="glass-card p-5 rounded-2xl">
+                    <span class="text-xs text-slate-500 dark:text-slate-400">إجمالي المشاريع</span>
+                    <div id="kpi-projects" class="font-brand text-3xl font-extrabold text-skyElectric mt-1">0</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl">
+                    <span class="text-xs text-slate-500 dark:text-slate-400">التصنيفات النشطة</span>
+                    <div id="kpi-categories" class="font-brand text-3xl font-extrabold mt-1">0</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl">
+                    <span class="text-xs text-slate-500 dark:text-slate-400">آراء العملاء</span>
+                    <div id="kpi-testimonials" class="font-brand text-3xl font-extrabold text-emerald-400 mt-1">0</div>
+                </div>
+                <div class="glass-card p-5 rounded-2xl">
+                    <span class="text-xs text-slate-500 dark:text-slate-400">إجمالي الزيارات والرسائل</span>
+                    <div id="kpi-views" class="font-brand text-3xl font-extrabold text-amber-400 mt-1">1,240</div>
+                </div>
+            </div>
+
+            <!-- Admin Navigation Tabs -->
+            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-6">
+                <button data-admin-tab="tab-projects" class="admin-tab-btn active px-5 py-3 rounded-xl text-xs font-bold bg-skyElectric text-white whitespace-nowrap">
+                    <i class="fa-solid fa-images ml-1.5"></i> إدارة المشاريع
+                </button>
+                <button data-admin-tab="tab-categories" class="admin-tab-btn px-5 py-3 rounded-xl text-xs font-bold glass-card whitespace-nowrap">
+                    <i class="fa-solid fa-tags ml-1.5"></i> التصنيفات
+                </button>
+                <button data-admin-tab="tab-services" class="admin-tab-btn px-5 py-3 rounded-xl text-xs font-bold glass-card whitespace-nowrap">
+                    <i class="fa-solid fa-briefcase ml-1.5"></i> الخدمات
+                </button>
+                <button data-admin-tab="tab-testimonials" class="admin-tab-btn px-5 py-3 rounded-xl text-xs font-bold glass-card whitespace-nowrap">
+                    <i class="fa-solid fa-star ml-1.5"></i> آراء العملاء
+                </button>
+                <button data-admin-tab="tab-settings" class="admin-tab-btn px-5 py-3 rounded-xl text-xs font-bold glass-card whitespace-nowrap">
+                    <i class="fa-solid fa-user-gear ml-1.5"></i> الرئيسية وعني والتواصل
+                </button>
+                <button data-admin-tab="tab-messages" class="admin-tab-btn px-5 py-3 rounded-xl text-xs font-bold glass-card whitespace-nowrap">
+                    <i class="fa-solid fa-inbox ml-1.5"></i> رسائل العملاء
+                </button>
+            </div>
+
+            <!-- TAB 1: PROJECTS MANAGER -->
+            <div id="tab-projects" class="admin-tab-panel space-y-8">
+                <div class="glass-card p-6 sm:p-8 rounded-3xl">
+                    <h2 id="project-form-heading" class="text-lg font-extrabold mb-5 text-skyElectric">إضافة مشروع جديد إلى المعرض</h2>
+                    <form id="admin-project-form" class="grid sm:grid-cols-2 gap-5">
+                        <input type="hidden" id="edit-project-id">
+                        <div>
+                            <label class="block text-xs font-bold mb-1.5">اسم المشروع</label>
+                            <input type="text" id="proj-title-input" required placeholder="مثال: غلاف مذكرة الفيزياء للثانوية العامة" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-1.5">التصنيف</label>
+                            <select id="proj-cat-input" required class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                                <!-- Populated dynamically -->
+                            </select>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold mb-1.5">وصف المشروع</label>
+                            <textarea id="proj-desc-input" rows="3" required placeholder="اكتب وصفًا احترافيًا لفكرة التصميم والألوان المستخدمة..." class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm"></textarea>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold mb-1.5">رفع صورة المشروع من الجهاز أو الهاتف</label>
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <label class="w-full sm:w-auto cursor-pointer px-5 py-3 rounded-xl bg-skyElectric/15 text-skyElectric hover:bg-skyElectric hover:text-white font-bold text-xs transition-all flex items-center justify-center gap-2 border border-skyElectric/30">
+                                    <i class="fa-solid fa-cloud-arrow-up text-base"></i>
+                                    <span>اختر صورة من جهازك</span>
+                                    <input type="file" id="proj-file-input" accept="image/*" class="hidden">
+                                </label>
+                                <span id="file-upload-status" class="text-xs text-slate-500">لم يتم اختيار ملف جديد (يتم ضغط الصورة تلقائيًا للحفظ السريع)</span>
+                            </div>
+                            <img id="proj-preview-thumb" src="" alt="" class="hidden mt-3 h-28 rounded-xl object-cover border border-skyElectric/40">
+                        </div>
+                        <div class="sm:col-span-2 flex items-center gap-3">
+                            <button type="submit" class="px-6 py-3.5 rounded-xl bg-skyElectric hover:bg-skyGlow text-white font-bold text-sm transition-all">
+                                <i class="fa-solid fa-floppy-disk ml-1"></i> حفظ المشروع
+                            </button>
+                            <button type="button" id="cancel-edit-project" class="hidden px-5 py-3.5 rounded-xl border border-slate-300 dark:border-white/15 text-xs font-bold">
+                                إلغاء التعديل
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Existing Projects List -->
+                <div class="glass-card p-6 rounded-3xl">
+                    <h3 class="text-lg font-extrabold mb-4">المشاريع الحالية (<span id="admin-proj-count">0</span>)</h3>
+                    <div id="admin-projects-list" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: CATEGORIES MANAGER -->
+            <div id="tab-categories" class="admin-tab-panel hidden space-y-6">
+                <div class="glass-card p-6 rounded-3xl max-w-2xl">
+                    <h2 class="text-lg font-extrabold mb-4 text-skyElectric">إدارة تصنيفات الأعمال</h2>
+                    <form id="admin-category-form" class="flex gap-3 mb-6">
+                        <input type="text" id="new-category-input" required placeholder="اسم التصنيف الجديد..." class="flex-1 px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                        <button type="submit" class="px-5 py-3 rounded-xl bg-skyElectric text-white font-bold text-sm">إضافة</button>
+                    </form>
+                    <div id="admin-categories-list" class="space-y-2">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: SERVICES MANAGER -->
+            <div id="tab-services" class="admin-tab-panel hidden space-y-6">
+                <div class="glass-card p-6 rounded-3xl">
+                    <h2 class="text-lg font-extrabold mb-4 text-skyElectric">إضافة خدمة جديدة</h2>
+                    <form id="admin-service-form" class="grid sm:grid-cols-3 gap-4 mb-6">
+                        <input type="text" id="srv-title-input" required placeholder="عنوان الخدمة (مثال: تصميم شعارات)" class="px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                        <input type="text" id="srv-icon-input" value="fa-solid fa-pen-nib" placeholder="أيقونة FontAwesome" class="px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm" dir="ltr">
+                        <input type="text" id="srv-desc-input" required placeholder="وصف مختصر للخدمة" class="px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                        <button type="submit" class="sm:col-span-3 w-fit px-6 py-3 rounded-xl bg-skyElectric text-white font-bold text-sm">إضافة الخدمة</button>
+                    </form>
+                    <div id="admin-services-list" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                </div>
+            </div>
+
+            <!-- TAB 4: TESTIMONIALS MANAGER -->
+            <div id="tab-testimonials" class="admin-tab-panel hidden space-y-6">
+                <div class="glass-card p-6 rounded-3xl">
+                    <h2 class="text-lg font-extrabold mb-4 text-skyElectric">إضافة رأي عميل جديد</h2>
+                    <form id="admin-testimonial-form" class="grid sm:grid-cols-3 gap-4 mb-6">
+                        <input type="text" id="rev-name-input" required placeholder="اسم العميل" class="px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                        <input type="text" id="rev-role-input" required placeholder="الصفة / النشاط (مثال: مؤلف كتب)" class="px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                        <select id="rev-stars-input" class="px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                            <option value="5">5 نجوم ⭐⭐⭐⭐⭐</option>
+                            <option value="4">4 نجوم ⭐⭐⭐⭐</option>
+                        </select>
+                        <textarea id="rev-text-input" rows="2" required placeholder="نص تقييم العميل..." class="sm:col-span-3 px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm"></textarea>
+                        <button type="submit" class="sm:col-span-3 w-fit px-6 py-3 rounded-xl bg-skyElectric text-white font-bold text-sm">نشر التقييم</button>
+                    </form>
+                    <div id="admin-testimonials-list" class="grid sm:grid-cols-2 gap-4"></div>
+                </div>
+            </div>
+
+            <!-- TAB 5: SITE PROFILE, HERO, ABOUT & CONTACT SETTINGS -->
+            <div id="tab-settings" class="admin-tab-panel hidden">
+                <form id="admin-settings-form" class="glass-card p-6 sm:p-8 rounded-3xl space-y-6">
+                    <h2 class="text-lg font-extrabold text-skyElectric">تعديل محتوى الصفحة الرئيسية وعني وبيانات التواصل</h2>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold mb-1.5">العنوان الرئيسي (Hero Headline)</label>
+                            <input type="text" id="set-hero-headline" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-1.5">شارة التوفر في الرئيسية</label>
+                            <input type="text" id="set-hero-badge" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm">
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold mb-1.5">الوصف التعريفي في الصفحة الرئيسية</label>
+                            <textarea id="set-hero-bio" rows="3" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm"></textarea>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs font-bold mb-1.5">نبذة قسم عني (About Me)</label>
+                            <textarea id="set-about-desc" rows="3" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-1.5">رقم الهاتف والواتساب</label>
+                            <input type="text" id="set-phone" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm" dir="ltr">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-1.5">البريد الإلكتروني</label>
+                            <input type="email" id="set-email" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm" dir="ltr">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-1.5">رابط Behance</label>
+                            <input type="url" id="set-behance" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm" dir="ltr">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold mb-1.5">رابط Instagram</label>
+                            <input type="url" id="set-instagram" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 text-sm" dir="ltr">
+                        </div>
+                    </div>
+                    <button type="submit" class="px-8 py-3.5 rounded-xl bg-skyElectric hover:bg-skyGlow text-white font-bold text-sm shadow-lg shadow-skyElectric/25">
+                        حفظ كافة التعديلات
+                    </button>
+                </form>
+            </div>
+
+            <!-- TAB 6: CLIENT MESSAGES -->
+            <div id="tab-messages" class="admin-tab-panel hidden">
+                <div class="glass-card p-6 rounded-3xl">
+                    <h2 class="text-lg font-extrabold mb-4 text-skyElectric">الرسائل وطلبات التصميم الواردة</h2>
+                    <div id="admin-messages-list" class="space-y-3">
+                        <p class="text-sm text-slate-500">لا توجد رسائل جديدة بعد.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FIREBASE & APPLICATION LOGIC ==================== -->
+    <script type="module">
+        // اختياري: رابط خادمك (proxy) لو عايز Mazen AI يرد بذكاء اصطناعي حقيقي. سيبه فاضي لاستخدام الردود المدمجة.
+        const MAZEN_AI_ENDPOINT = "";
+
+        // -------------------- 1. SVG ARTWORK GENERATOR FOR RICH DEFAULT PORTFOLIO --------------------
+        function createDesignSvg(title, subtitle, accent1, accent2, badge) {
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+                <defs>
+                    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#0A0A0C"/>
+                        <stop offset="55%" stop-color="#111827"/>
+                        <stop offset="100%" stop-color="${accent1}"/>
+                    </linearGradient>
+                    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="${accent1}"/>
+                        <stop offset="100%" stop-color="${accent2}"/>
+                    </linearGradient>
+                </defs>
+                <rect width="800" height="600" fill="url(#bg)"/>
+                <circle cx="650" cy="120" r="190" fill="${accent1}" fill-opacity="0.22"/>
+                <circle cx="140" cy="500" r="160" fill="${accent2}" fill-opacity="0.16"/>
+                <rect x="70" y="70" width="660" height="460" rx="32" fill="#0F172A" fill-opacity="0.72" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="2"/>
+                <rect x="115" y="115" width="170" height="36" rx="18" fill="url(#card)"/>
+                <text x="200" y="138" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="14">${badge}</text>
+                <polygon points="560,180 650,300 560,420 470,300" fill="none" stroke="${accent2}" stroke-width="4"/>
+                <circle cx="560" cy="300" r="46" fill="url(#card)"/>
+                <text x="115" y="255" fill="#FFFFFF" font-family="sans-serif" font-weight="800" font-size="36">${title}</text>
+                <text x="115" y="305" fill="#94A3B8" font-family="sans-serif" font-weight="500" font-size="20">${subtitle}</text>
+                <line x1="115" y1="355" x2="360" y2="355" stroke="${accent2}" stroke-width="4" stroke-linecap="round"/>
+                <text x="115" y="475" fill="#38BDF8" font-family="sans-serif" font-weight="800" font-size="16" letter-spacing="4">MAZEN DESIGN STUDIO</text>
+            </svg>`;
+            return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+        }
+
+        // -------------------- 2. DEFAULT DATA STATE --------------------
+        const defaultCategories = [
+            "تصميم أغلفة الكتب والمذكرات",
+            "تصميم الشعارات والهويات البصرية",
+            "تصميم الإعلانات والسوشيال ميديا",
+            "تصميم المطبوعات",
+            "تصميمات المنتجات",
+            "تصميمات أخرى"
+        ];
+
+        const defaultProjects = [
+            {
+                id: "p1",
+                title: "غلاف كتاب أسرار الإبداع البصري",
+                category: "تصميم أغلفة الكتب والمذكرات",
+                description: "تصميم غلاف كتاب احترافي متكامل (وجه وظهر وكعب) بتايبوجرافي عربي حديث وتأثيرات إضاءة زرقاء فاخرة جاهز للطباعة بدقة CMYK.",
+                image: createDesignSvg("BOOK COVER", "Creative Visual Mastery Edition", "#0284C7", "#38BDF8", "BOOK DESIGN")
+            },
+            {
+                id: "p2",
+                title: "هوية بصرية وشعار شركة نيكست تك",
+                category: "تصميم الشعارات والهويات البصرية",
+                description: "تصميم شعار هندسي مبتكر مع دليل الهوية البصرية الكامل، بطاقات الأعمال، والأوراق الرسمية بلمسة عصرية.",
+                image: createDesignSvg("NEXT TECH", "Brand Identity & Logo System", "#0EA5E9", "#7DD3FC", "BRANDING")
+            },
+            {
+                id: "p3",
+                title: "سلسلة مذكرات القمة التعليمية",
+                category: "تصميم أغلفة الكتب والمذكرات",
+                description: "تصميم سلسلة أغلفة مذكرات تعليمية للمرحلة الثانوية بألوان جذابة وتنسيق منظم يبرز اسم المادة والأستاذ.",
+                image: createDesignSvg("STUDY NOTES", "Educational Series Cover Design", "#0369A1", "#38BDF8", "EDUCATION")
+            },
+            {
+                id: "p4",
+                title: "حملة إعلانات سوشيال ميديا لعلامة تجارية",
+                category: "تصميم الإعلانات والسوشيال ميديا",
+                description: "تصميمات إعلانية احترافية لمنصات انستجرام وفيسبوك تعتمد على الدمج البصري والتركيز على جذب انتباه العميل.",
+                image: createDesignSvg("SOCIAL ADS", "High-Conversion Campaign Kit", "#0EA5E9", "#0284C7", "MARKETING")
+            },
+            {
+                id: "p5",
+                title: "تصميم عبوة وتغليف منتج قهوة مختصة",
+                category: "تصميمات المنتجات",
+                description: "تصميم تغليف فاخر لمنتج قهوة مختصة يجمع بين اللون الأسود الملكي والأزرق السماوي مع نماذج عرض ثلاثية الأبعاد.",
+                image: createDesignSvg("PACKAGING", "Luxury Product Box & Mockup", "#1D4ED8", "#38BDF8", "PRODUCT")
+            },
+            {
+                id: "p6",
+                title: "تصميم بروشور ورول أب لمؤتمر تقني",
+                category: "تصميم المطبوعات",
+                description: "تصميم مطبوعات دعائية متكاملة تشمل الرول أب والبروشور الثلاثي بمقاسات طباعية دقيقة وتناسق بصري عالٍ.",
+                image: createDesignSvg("PRINT MEDIA", "Roll-Up & Corporate Brochure", "#0284C7", "#7DD3FC", "PRINT")
+            }
+        ];
+
+        const defaultServices = [
+            { id: "s1", title: "تصميم الشعارات", icon: "fa-solid fa-compass-drafting", desc: "ابتكار شعارات فريدة تعبر عن جوهر علامتك التجارية وتبقى عالقة في الأذهان." },
+            { id: "s2", title: "تصميم أغلفة الكتب", icon: "fa-solid fa-book-open", desc: "أغلفة كتب وروايات احترافية بتكوين بصري جذاب وتجهيز كامل للطباعة والنشر." },
+            { id: "s3", title: "تصميم المذكرات التعليمية", icon: "fa-solid fa-graduation-cap", desc: "تصميم أغلفة وتنسيق داخلي للمذكرات الدراسية بأسلوب حديث يليق بالمعلمين." },
+            { id: "s4", title: "تصميم الإعلانات", icon: "fa-solid fa-bullhorn", desc: "بوستات وحملات سوشيال ميديا إبداعية مصممة لزيادة التفاعل والمبيعات." },
+            { id: "s5", title: "تصميم الهوية البصرية", icon: "fa-solid fa-fingerprint", desc: "بناء هوية بصرية متكاملة تشمل الألوان والخطوط والمطبوعات الرسمية." },
+            { id: "s6", title: "تصميم المطبوعات", icon: "fa-solid fa-print", desc: "فلايرات، بروشورات، كروت شخصية، وبنرات إعلانية بأعلى جودة طباعية." }
+        ];
+
+        const defaultTestimonials = [
+            { id: "t1", name: "أ. محمود عبد الرحمن", role: "مؤلف ومحاضر", stars: 5, text: "تعاملت مع MAZEN DESIGN في تصميم سلسلة مذكراتي التعليمية، النتيجة فاقت التوقعات من حيث الدقة والذوق الراقي والالتزام بالموعد." },
+            { id: "t2", name: "م. كريم السيد", role: "مؤسس شركة تقنية", stars: 5, text: "مصمم محترف بكل معنى الكلمة، فهم رؤية شركتنا من أول جلسة وصمم لنا شعارًا وهوية بصرية نالت إعجاب جميع عملائنا." },
+            { id: "t3", name: "د. سارة المنشاوي", role: "كاتبة وروائية", stars: 5, text: "غلاف كتابي الجديد كان تحفة فنية حقيقية بفضل لمسات مازن الإبداعية واختياره الموفق للألوان والخطوط." }
+        ];
+
+        const defaultSettings = {
+            heroHeadline: "Creative Graphic Designer",
+            heroBadge: "متاح لاستقبال مشاريع التصميم الجديدة",
+            heroBio: "أحوّل الأفكار إلى تجارب بصرية استثنائية تخطف الأنظار. متخصص في بناء الهويات البصرية المتكاملة، تصميم الشعارات الاحترافية، أغلفة الكتب والمذكرات التعليمية، وإعلانات السوشيال ميديا بأسلوب يجمع بين الفخامة والبساطة.",
+            aboutDesc: "أنا مازن، مصمم جرافيك شغوف بصناعة الهويات البصرية المميزة والتصاميم الإعلانية والتعليمية الاحترافية. أؤمن بأن التصميم الجيد ليس مجرد ألوان وأشكال، بل هو رسالة بصرية ذكية تترك انطباعًا لا يُنسى لدى الجمهور وتساعد العلامات التجارية والمؤلفين والمعلمين على التميز.",
+            phone: "01144341455",
+            email: "mmmk81667@gmail.com",
+            behance: "https://www.behance.net",
+            instagram: "https://www.instagram.com",
+            views: 1248
+        };
+
+        // App State
+        let state = {
+            lang: "ar",
+            activeCategory: "ALL",
+            searchQuery: "",
+            isAdminAuthenticated: false,
+            categories: [...defaultCategories],
+            projects: [...defaultProjects],
+            services: [...defaultServices],
+            testimonials: [...defaultTestimonials],
+            settings: { ...defaultSettings },
+            messages: [],
+            views: 1248,
+            cloudSeeded: false,
+            uploadedImageBase64: ""
+        };
+
+        // -------------------- 3. PHP SERVER LAYER (api.php) --------------------
+        const API_URL = "api.php";
+        const appId = "mazen";
+        let db = null;                 // يبقى {} لما السيرفر شغال
+        let strictAdmin = true;
+        let adminKey = "";
+
+        async function api(action, body) {
+            const r = await fetch(`${API_URL}?action=${action}`, {
+                method: body ? "POST" : "GET",
+                headers: { "Content-Type": "application/json" },
+                body: body ? JSON.stringify(body) : undefined
+            });
+            const d = await r.json().catch(() => ({}));
+            if (!r.ok) throw Object.assign(new Error(d.error || ("HTTP " + r.status)), { code: "http-" + r.status });
+            return d;
+        }
+
+        // طبقة توافق: باقي الكود بيستدعي نفس الدوال، وهي دلوقتي بتحفظ على السيرفر
+        async function ensureAuthReady() { return db ? {} : null; }
+        const doc = (_d, ...p) => ({ col: p[4], id: p[5] });
+        const collection = (_d, ...p) => ({ col: p[4] });
+        async function saveAll() {
+            const { views, ...settings } = state.settings;
+            const d = await api("save", { key: adminKey, categories: state.categories, projects: state.projects,
+                services: state.services, testimonials: state.testimonials, settings });
+            if (d.projects) { state.projects = d.projects; renderProjects(); renderAdminLists(); }
+        }
+        const setDoc = () => saveAll();
+        const deleteDoc = () => saveAll();
+        const addDoc = (_ref, obj) => api("message", obj);
+
+        function setCloudStatus(ok) {
+            const el = document.getElementById("cloud-status");
+            if (!el) return;
+            el.className = "inline-block mt-2 px-3 py-1 rounded-full text-[11px] font-bold " + (ok ? "bg-emerald-500/15 text-emerald-400" : "bg-amber-500/15 text-amber-500");
+            el.textContent = ok ? "متصل بالسيرفر: أي تعديل يظهر لكل الزوار" : "السيرفر غير متصل: ارفع api.php بجانب index.html وافتح الموقع من رابطه";
+        }
+
+        async function loadFromServer() {
+            const d = await api("get");
+            if (d.seeded) {
+                state.categories = d.categories; state.projects = d.projects;
+                state.services = d.services; state.testimonials = d.testimonials;
+                state.settings = { ...defaultSettings, ...d.settings };
+            }
+            state.views = d.views || state.views;
+            renderAll();
+        }
+
+        async function loadMessages() {
+            try { state.messages = (await api("messages", { key: adminKey })).messages; renderAdminLists(); } catch (e) {}
+        }
+
+        async function initFirebase() {
+            try {
+                db = {};
+                document.getElementById("quick-admin-access").parentElement.classList.add("hidden");
+                await loadFromServer();
+                setCloudStatus(true);
+                api("visit", {}).catch(() => {});
+                setInterval(() => {
+                    if (state.isAdminAuthenticated) loadMessages();
+                    else loadFromServer().catch(() => {});
+                }, 30000);
+            } catch (err) {
+                console.warn("Server not reachable, local mode:", err.message);
+                db = null;
+                setCloudStatus(false);
+            }
+        }
+
+        // -------------------- 4. BILINGUAL DICTIONARY --------------------
+        const i18n = {
+            ar: {
+                nav_home: "الرئيسية",
+                nav_projects: "أعمالي",
+                nav_about: "عني",
+                nav_services: "خدماتي",
+                nav_testimonials: "آراء العملاء",
+                nav_contact: "تواصل معي",
+                nav_admin: "لوحة التحكم",
+                hero_cta_work: "استكشف أعمالي",
+                hero_cta_contact: "تواصل معي",
+                stat_projects: "مشروع مكتمل",
+                stat_clients: "عميل سعيد",
+                stat_years: "سنوات خبرة",
+                projects_sub: "معرض الإبداع",
+                projects_title: "أحدث أعمالي ومشاريعي",
+                search_placeholder: "ابحث عن مشروع أو تصميم...",
+                all_categories: "جميع الأعمال",
+                no_projects: "لا توجد مشاريع مطابقة لبحثك حاليًا",
+                about_sub: "من أنا ومهاراتي",
+                about_title: "الأدوات والخبرات الإبداعية",
+                about_card_title: "شغف بالتفاصيل ودقة في التنفيذ",
+                about_quality: "جودة طباعة ورقمية",
+                about_support: "التزام بالمواعيد",
+                skill_branding: "التايبوجرافي والهوية",
+                services_sub: "ماذا أقدم لك؟",
+                services_title: "خدماتي الإبداعية",
+                services_desc: "حلول تصميمية متكاملة مصممة خصيصًا لرفع قيمة علامتك التجارية وجذب جمهورك المستهدف بأعلى معايير الجودة.",
+                testimonials_sub: "شركاء النجاح",
+                testimonials_title: "آراء وتقييمات العملاء",
+                contact_sub: "ابدأ مشروعك الآن",
+                contact_title: "لنتعاون معًا في تصميمك القادم",
+                contact_desc: "هل لديك فكرة مشروع أو تحتاج إلى هوية بصرية أو غلاف كتاب مميز؟ تواصل معي مباشرة عبر الواتساب أو البريد الإلكتروني.",
+                contact_phone_label: "رقم الهاتف",
+                contact_email_label: "البريد الإلكتروني",
+                contact_whatsapp: "تواصل مباشر عبر واتساب",
+                form_title: "أرسل تفاصيل مشروعك",
+                form_name: "الاسم الكامل",
+                form_phone: "رقم الهاتف / واتساب",
+                form_service: "نوع التصميم المطلوب",
+                form_details: "تفاصيل المشروع",
+                form_submit: "إرسال الطلب وحفظه",
+                order_similar: "اطلب تصميمًا مشابهًا"
+            },
+            en: {
+                nav_home: "Home",
+                nav_projects: "Projects",
+                nav_about: "About",
+                nav_services: "Services",
+                nav_testimonials: "Reviews",
+                nav_contact: "Contact",
+                nav_admin: "Admin Panel",
+                hero_cta_work: "Explore My Work",
+                hero_cta_contact: "Contact Me",
+                stat_projects: "Completed Projects",
+                stat_clients: "Happy Clients",
+                stat_years: "Years Experience",
+                projects_sub: "CREATIVE PORTFOLIO",
+                projects_title: "Featured Works & Projects",
+                search_placeholder: "Search designs or projects...",
+                all_categories: "All Works",
+                no_projects: "No matching projects found.",
+                about_sub: "ABOUT & EXPERTISE",
+                about_title: "Creative Tools & Mastery",
+                about_card_title: "Obsessed with Detail & Precision",
+                about_quality: "Print & Digital Quality",
+                about_support: "On-Time Delivery",
+                skill_branding: "Typography & Identity",
+                services_sub: "WHAT I OFFER",
+                services_title: "Creative Design Services",
+                services_desc: "Tailored graphic design solutions crafted to elevate your brand identity and captivate your audience.",
+                testimonials_sub: "CLIENT FEEDBACK",
+                testimonials_title: "Client Testimonials",
+                contact_sub: "START A PROJECT",
+                contact_title: "Let's Create Something Iconic",
+                contact_desc: "Have a project in mind or need a custom logo, book cover, or campaign? Reach out directly via WhatsApp or Email.",
+                contact_phone_label: "Phone Number",
+                contact_email_label: "Email Address",
+                contact_whatsapp: "Direct WhatsApp Chat",
+                form_title: "Send Project Brief",
+                form_name: "Full Name",
+                form_phone: "Phone / WhatsApp",
+                form_service: "Design Service Needed",
+                form_details: "Project Details",
+                form_submit: "Submit Inquiry",
+                order_similar: "Order Similar Design"
+            }
+        };
+
+        // -------------------- 5. UI RENDERING FUNCTIONS --------------------
+        function esc(s) {
+            return String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+        }
+
+        // يوضّح بصدق هل الحفظ وصل للزوار ولا لأ
+        function syncToast(msg) {
+            if (db) showToast(msg);
+            else showToast("تم الحفظ على جهازك فقط ولن يراه الزوار قبل ربط Firebase", "error");
+        }
+
+        function showToast(msg, type = "success") {
+            const container = document.getElementById("toast-container");
+            const el = document.createElement("div");
+            const color = type === "error" ? "bg-rose-600" : "bg-skyElectric";
+            el.className = `${color} text-white px-5 py-3 rounded-2xl shadow-xl text-xs font-bold flex items-center gap-2 pointer-events-auto transition-all`;
+            el.innerHTML = `<i class="fa-solid ${type === 'error' ? 'fa-circle-exclamation' : 'fa-circle-check'}"></i><span>${msg}</span>`;
+            container.appendChild(el);
+            setTimeout(() => {
+                el.style.opacity = "0";
+                setTimeout(() => el.remove(), 300);
+            }, 3200);
+        }
+
+        function applyLanguage() {
+            const html = document.documentElement;
+            html.lang = state.lang;
+            html.dir = state.lang === "ar" ? "rtl" : "ltr";
+            document.getElementById("lang-label").textContent = state.lang === "ar" ? "EN" : "عربي";
+
+            const dict = i18n[state.lang];
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (dict[key]) el.textContent = dict[key];
+            });
+            document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+                const key = el.getAttribute("data-i18n-placeholder");
+                if (dict[key]) el.placeholder = dict[key];
+            });
+            renderCategories();
+        }
+
+        function renderSettings() {
+            const s = state.settings;
+            document.getElementById("hero-headline").textContent = s.heroHeadline;
+            document.getElementById("hero-badge").textContent = s.heroBadge;
+            document.getElementById("hero-bio").textContent = s.heroBio;
+            document.getElementById("about-description").textContent = s.aboutDesc;
+
+            document.getElementById("contact-phone-text").textContent = s.phone;
+            document.getElementById("contact-phone-link").href = `tel:${s.phone}`;
+            document.getElementById("contact-email-text").textContent = s.email;
+            document.getElementById("contact-email-link").href = `mailto:${s.email}`;
+
+            const cleanPhone = s.phone.replace(/^0/, "20");
+            document.getElementById("contact-whatsapp-btn").href = `https://wa.me/${cleanPhone}?text=${encodeURIComponent("مرحبًا MAZEN DESIGN، أرغب في الاستفسار عن خدمات التصميم.")}`;
+            document.getElementById("social-behance").href = s.behance || "https://www.behance.net";
+            document.getElementById("social-instagram").href = s.instagram || "https://www.instagram.com";
+
+            // Sync admin settings form inputs
+            document.getElementById("set-hero-headline").value = s.heroHeadline;
+            document.getElementById("set-hero-badge").value = s.heroBadge;
+            document.getElementById("set-hero-bio").value = s.heroBio;
+            document.getElementById("set-about-desc").value = s.aboutDesc;
+            document.getElementById("set-phone").value = s.phone;
+            document.getElementById("set-email").value = s.email;
+            document.getElementById("set-behance").value = s.behance || "";
+            document.getElementById("set-instagram").value = s.instagram || "";
+        }
+
+        function renderCategories() {
+            const container = document.getElementById("category-filters");
+            const allLabel = i18n[state.lang].all_categories;
+            const cats = ["ALL", ...state.categories];
+
+            container.innerHTML = cats.map(cat => {
+                const isActive = state.activeCategory === cat;
+                const label = cat === "ALL" ? allLabel : cat;
+                return `<button data-cat="${cat}" class="cat-pill px-5 py-2.5 rounded-full text-xs font-bold whitespace-nowrap transition-all ${
+                    isActive
+                        ? "bg-skyElectric text-white shadow-lg shadow-skyElectric/30"
+                        : "glass-card hover:border-skyElectric text-slate-700 dark:text-slate-300"
+                }">${label}</button>`;
+            }).join("");
+
+            container.querySelectorAll(".cat-pill").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    state.activeCategory = btn.getAttribute("data-cat");
+                    renderCategories();
+                    renderProjects();
+                });
+            });
+
+            // Also populate project category dropdown in Admin
+            const select = document.getElementById("proj-cat-input");
+            if (select) {
+                const keep = select.value;
+                select.innerHTML = state.categories.map(c => `<option value="${c}">${c}</option>`).join("");
+                if (keep && state.categories.includes(keep)) select.value = keep;
+            }
+        }
+
+        function renderProjects() {
+            const grid = document.getElementById("projects-grid");
+            const emptyState = document.getElementById("projects-empty");
+            const q = state.searchQuery.trim().toLowerCase();
+
+            const filtered = state.projects.filter(p => {
+                const matchCat = state.activeCategory === "ALL" || p.category === state.activeCategory;
+                const matchSearch = !q || p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
+                return matchCat && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = "";
+                emptyState.classList.remove("hidden");
+                return;
+            }
+            emptyState.classList.add("hidden");
+
+            grid.innerHTML = filtered.map(p => `
+                <article data-project-id="${p.id}" class="project-card project-card-hover group glass-card rounded-3xl overflow-hidden cursor-pointer flex flex-col">
+                    <div class="relative aspect-[4/3] bg-obsidian overflow-hidden">
+                        <img src="${p.image}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-5">
+                            <span class="px-3 py-1 rounded-full bg-skyElectric text-white text-[11px] font-bold">
+                                <i class="fa-solid fa-expand ml-1"></i> عرض كامل
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+                        <div>
+                            <span class="text-[11px] font-bold text-skyElectric block mb-1.5">${p.category}</span>
+                            <h3 class="text-lg font-extrabold text-slate-900 dark:text-white group-hover:text-skyElectric transition-colors">${p.title}</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed">${p.description}</p>
+                        </div>
+                    </div>
+                </article>
+            `).join("");
+
+            grid.querySelectorAll(".project-card").forEach(card => {
+                card.addEventListener("click", () => {
+                    const id = card.getAttribute("data-project-id");
+                    const proj = state.projects.find(item => item.id === id);
+                    if (proj) openLightbox(proj);
+                });
+            });
+        }
+
+        function openLightbox(proj) {
+            document.getElementById("lightbox-img").src = proj.image;
+            document.getElementById("lightbox-cat").textContent = proj.category;
+            document.getElementById("lightbox-title").textContent = proj.title;
+            document.getElementById("lightbox-desc").textContent = proj.description;
+            const cleanPhone = state.settings.phone.replace(/^0/, "20");
+            document.getElementById("lightbox-order-btn").href = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(`مرحبًا MAZEN DESIGN، أعجبني مشروع "${proj.title}" وأرغب في طلب تصميم مشابه.`)}`;
+            document.getElementById("project-lightbox").classList.remove("hidden");
+        }
+
+        function renderServices() {
+            const grid = document.getElementById("services-grid");
+            grid.innerHTML = state.services.map(s => `
+                <div class="glass-card p-7 rounded-3xl hover:border-skyElectric/50 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-skyElectric/15 text-skyElectric group-hover:bg-skyElectric group-hover:text-white flex items-center justify-center text-2xl mb-5 transition-colors">
+                        <i class="${s.icon}"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-2.5">${s.title}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">${s.desc}</p>
+                </div>
+            `).join("");
+        }
+
+        function renderTestimonials() {
+            const grid = document.getElementById("testimonials-grid");
+            grid.innerHTML = state.testimonials.map(t => `
+                <div class="glass-card p-7 rounded-3xl flex flex-col justify-between space-y-5">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-1 text-amber-400 text-sm">
+                            ${Array(Number(t.stars || 5)).fill('<i class="fa-solid fa-star"></i>').join("")}
+                        </div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">"${t.text}"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-slate-200/60 dark:border-white/10">
+                        <div class="w-10 h-10 rounded-full bg-skyElectric/20 text-skyElectric font-bold flex items-center justify-center">
+                            ${t.name.charAt(0)}
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-extrabold">${t.name}</h4>
+                            <span class="text-xs text-slate-500 dark:text-slate-400">${t.role}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function renderAdminLists() {
+            document.getElementById("kpi-projects").textContent = state.projects.length;
+            document.getElementById("kpi-categories").textContent = state.categories.length;
+            document.getElementById("kpi-testimonials").textContent = state.testimonials.length;
+            document.getElementById("kpi-views").textContent = state.views;
+            document.getElementById("admin-proj-count").textContent = state.projects.length;
+
+            // Admin Projects List
+            const pList = document.getElementById("admin-projects-list");
+            pList.innerHTML = state.projects.map(p => `
+                <div class="p-4 rounded-2xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 flex flex-col justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <img src="${p.image}" class="w-16 h-16 rounded-xl object-cover shrink-0">
+                        <div class="min-w-0">
+                            <span class="text-[10px] font-bold text-skyElectric block truncate">${p.category}</span>
+                            <h4 class="text-sm font-bold truncate">${p.title}</h4>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-white/5">
+                        <button data-edit-proj="${p.id}" class="flex-1 py-2 rounded-lg bg-skyElectric/15 text-skyElectric hover:bg-skyElectric hover:text-white text-xs font-bold transition-colors">تعديل</button>
+                        <button data-del-proj="${p.id}" class="flex-1 py-2 rounded-lg bg-rose-500/15 text-rose-500 hover:bg-rose-500 hover:text-white text-xs font-bold transition-colors">حذف</button>
+                    </div>
+                </div>
+            `).join("");
+
+            pList.querySelectorAll("[data-edit-proj]").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const proj = state.projects.find(x => x.id === btn.getAttribute("data-edit-proj"));
+                    if (!proj) return;
+                    document.getElementById("edit-project-id").value = proj.id;
+                    document.getElementById("proj-title-input").value = proj.title;
+                    document.getElementById("proj-cat-input").value = proj.category;
+                    document.getElementById("proj-desc-input").value = proj.description;
+                    state.uploadedImageBase64 = proj.image;
+                    const thumb = document.getElementById("proj-preview-thumb");
+                    thumb.src = proj.image;
+                    thumb.classList.remove("hidden");
+                    document.getElementById("project-form-heading").textContent = "تعديل المشروع: " + proj.title;
+                    document.getElementById("cancel-edit-project").classList.remove("hidden");
+                    document.getElementById("admin-project-form").scrollIntoView({ behavior: "smooth" });
+                });
+            });
+
+            pList.querySelectorAll("[data-del-proj]").forEach(btn => {
+                btn.addEventListener("click", async () => {
+                    const id = btn.getAttribute("data-del-proj");
+                    state.projects = state.projects.filter(x => x.id !== id);
+                    const user = await ensureAuthReady();
+                    if (db && user) {
+                        await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'portfolio_projects', id));
+                    }
+                    renderProjects();
+                    renderAdminLists();
+                    syncToast("تم حذف المشروع بنجاح للجميع");
+                });
+            });
+
+            // Admin Categories List
+            const cList = document.getElementById("admin-categories-list");
+            cList.innerHTML = state.categories.map((c, idx) => `
+                <div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10">
+                    <span class="text-sm font-bold">${c}</span>
+                    <button data-del-cat="${idx}" class="px-3 py-1 rounded-lg bg-rose-500/15 text-rose-500 hover:bg-rose-500 hover:text-white text-xs font-bold">حذف</button>
+                </div>
+            `).join("");
+
+            cList.querySelectorAll("[data-del-cat]").forEach(btn => {
+                btn.addEventListener("click", async () => {
+                    const idx = Number(btn.getAttribute("data-del-cat"));
+                    state.categories.splice(idx, 1);
+                    await saveMetaToFirebase();
+                    renderCategories();
+                    renderAdminLists();
+                    syncToast("تم حذف التصنيف");
+                });
+            });
+
+            // Admin Services List
+            const sList = document.getElementById("admin-services-list");
+            sList.innerHTML = state.services.map(s => `
+                <div class="p-4 rounded-2xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 flex justify-between items-start gap-3">
+                    <div>
+                        <h4 class="font-bold text-sm">${s.title}</h4>
+                        <p class="text-xs text-slate-500 mt-1">${s.desc}</p>
+                    </div>
+                    <button data-del-srv="${s.id}" class="px-3 py-1 rounded-lg bg-rose-500/15 text-rose-500 text-xs font-bold">حذف</button>
+                </div>
+            `).join("");
+
+            sList.querySelectorAll("[data-del-srv]").forEach(btn => {
+                btn.addEventListener("click", async () => {
+                    const id = btn.getAttribute("data-del-srv");
+                    state.services = state.services.filter(x => x.id !== id);
+                    const user = await ensureAuthReady();
+                    if (db && user) {
+                        await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'portfolio_services', id));
+                    }
+                    renderServices();
+                    renderAdminLists();
+                    syncToast("تم حذف الخدمة");
+                });
+            });
+
+            // Admin Testimonials List
+            const tList = document.getElementById("admin-testimonials-list");
+            tList.innerHTML = state.testimonials.map(t => `
+                <div class="p-4 rounded-2xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10 flex justify-between items-start gap-3">
+                    <div>
+                        <h4 class="font-bold text-sm">${t.name} <span class="text-xs text-skyElectric">(${t.role})</span></h4>
+                        <p class="text-xs text-slate-500 mt-1">${t.text}</p>
+                    </div>
+                    <button data-del-rev="${t.id}" class="px-3 py-1 rounded-lg bg-rose-500/15 text-rose-500 text-xs font-bold">حذف</button>
+                </div>
+            `).join("");
+
+            tList.querySelectorAll("[data-del-rev]").forEach(btn => {
+                btn.addEventListener("click", async () => {
+                    const id = btn.getAttribute("data-del-rev");
+                    state.testimonials = state.testimonials.filter(x => x.id !== id);
+                    const user = await ensureAuthReady();
+                    if (db && user) {
+                        await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'portfolio_testimonials', id));
+                    }
+                    renderTestimonials();
+                    renderAdminLists();
+                    syncToast("تم حذف التقييم");
+                });
+            });
+
+            // Admin Messages List
+            const mList = document.getElementById("admin-messages-list");
+            if (state.messages.length > 0) {
+                mList.innerHTML = state.messages.map(m => `
+                    <div class="p-4 rounded-2xl bg-white dark:bg-obsidian border border-slate-200 dark:border-white/10">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-bold text-sm text-skyElectric">${esc(m.name)} (${esc(m.phone)})</span>
+                            <span class="text-xs px-2.5 py-0.5 rounded-full bg-skyElectric/15 text-skyElectric font-bold">${esc(m.service)}</span>
+                        </div>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 mt-2">${esc(m.details)}</p>
+                    </div>
+                `).join("");
+            }
+        }
+
+        async function saveMetaToFirebase() {
+            const user = await ensureAuthReady();
+            if (!db || !user) return;
+            const { views, ...settings } = state.settings;
+            await setDoc(doc(db, 'artifacts', appId, 'public', 'data', 'portfolio_meta', 'config'), {
+                categories: state.categories,
+                settings
+            });
+        }
+
+        function renderAll() {
+            renderSettings();
+            renderCategories();
+            renderProjects();
+            renderServices();
+            renderTestimonials();
+            renderAdminLists();
+        }
+
+        // -------------------- 6. CLIENT-SIDE IMAGE COMPRESSION FOR UPLOADS --------------------
+        function compressImageFile(file) {
+            return new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        const canvas = document.createElement("canvas");
+                        const maxW = 720;
+                        const scale = Math.min(1, maxW / img.width);
+                        canvas.width = img.width * scale;
+                        canvas.height = img.height * scale;
+                        const ctx = canvas.getContext("2d");
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                        let quality = 0.75;
+                        let dataUrl = canvas.toDataURL("image/jpeg", quality);
+                        while (dataUrl.length > 750000 && quality > 0.3) {
+                            quality -= 0.1;
+                            dataUrl = canvas.toDataURL("image/jpeg", quality);
+                        }
+                        resolve(dataUrl);
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // -------------------- 7. EVENT LISTENERS & INTERACTIVITY --------------------
+        document.getElementById("year-now").textContent = new Date().getFullYear();
+
+        // Theme Toggle
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            const html = document.documentElement;
+            const isDark = html.classList.toggle("dark");
+            document.getElementById("theme-icon").className = isDark ? "fa-solid fa-sun" : "fa-solid fa-moon";
+        });
+
+        // Language Toggle
+        document.getElementById("lang-toggle").addEventListener("click", () => {
+            state.lang = state.lang === "ar" ? "en" : "ar";
+            applyLanguage();
+        });
+
+        // Mobile Menu
+        document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+        document.querySelectorAll(".mobile-link").forEach(l => {
+            l.addEventListener("click", () => document.getElementById("mobile-menu").classList.add("hidden"));
+        });
+
+        // Live Project Search
+        document.getElementById("project-search").addEventListener("input", (e) => {
+            state.searchQuery = e.target.value;
+            renderProjects();
+        });
+
+        // Close Lightbox
+        document.getElementById("close-lightbox").addEventListener("click", () => {
+            document.getElementById("project-lightbox").classList.add("hidden");
+        });
+        document.getElementById("project-lightbox").addEventListener("click", (e) => {
+            if (e.target.id === "project-lightbox") {
+                document.getElementById("project-lightbox").classList.add("hidden");
+            }
+        });
+
+        // Contact Form Submission
+        document.getElementById("contact-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const msgObj = {
+                id: "msg_" + Date.now(),
+                name: document.getElementById("msg-name").value.trim(),
+                phone: document.getElementById("msg-phone").value.trim(),
+                service: document.getElementById("msg-service").value,
+                details: document.getElementById("msg-details").value.trim(),
+                createdAt: new Date().toISOString()
+            };
+            if (!db) {
+                // بدون قاعدة بيانات: نرسل الطلب عبر واتساب بدل ما يضيع
+                const text = `مرحبًا MAZEN DESIGN، أنا ${msgObj.name} (${msgObj.phone}). أحتاج: ${msgObj.service}.\n${msgObj.details}`;
+                window.open(`https://wa.me/${state.settings.phone.replace(/^0/, "20")}?text=${encodeURIComponent(text)}`, "_blank");
+                form.reset();
+                showToast("هنفتح لك واتساب لإرسال طلبك مباشرة.");
+                return;
+            }
+            try {
+                await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'portfolio_messages'), msgObj);
+                form.reset();
+                showToast("تم إرسال طلبك بنجاح! سيتواصل معك مازن قريبًا.");
+            } catch (err) {
+                console.error(err);
+                showToast("تعذر إرسال الطلب الآن، جرّب التواصل عبر واتساب.", "error");
+            }
+        });
+
+        // Admin Modal & Authentication Flow (Triggered via 4 rapid clicks on Brand Logo)
+        function openAdminAccess() {
+            if (state.isAdminAuthenticated) {
+                document.getElementById("visitor-view").classList.add("hidden");
+                document.getElementById("admin-dashboard-view").classList.remove("hidden");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+                document.getElementById("admin-login-modal").classList.remove("hidden");
+            }
+        }
+
+        function attachQuadrupleClickSecret(element) {
+            if (!element) return;
+            let clickCount = 0;
+            let resetTimer = null;
+
+            element.addEventListener("click", (e) => {
+                clickCount++;
+                clearTimeout(resetTimer);
+                resetTimer = setTimeout(() => {
+                    clickCount = 0;
+                }, 900);
+
+                if (clickCount >= 4) {
+                    e.preventDefault();
+                    clickCount = 0;
+                    clearTimeout(resetTimer);
+                    openAdminAccess();
+                }
+            });
+        }
+
+        attachQuadrupleClickSecret(document.getElementById("header-brand-logo"));
+        attachQuadrupleClickSecret(document.getElementById("footer-brand-logo"));
+
+        document.getElementById("close-login-modal").addEventListener("click", () => {
+            document.getElementById("admin-login-modal").classList.add("hidden");
+        });
+
+        function grantAdminSession() {
+            state.isAdminAuthenticated = true;
+            document.getElementById("admin-login-modal").classList.add("hidden");
+            document.getElementById("visitor-view").classList.add("hidden");
+            document.getElementById("admin-dashboard-view").classList.remove("hidden");
+            renderAdminLists();
+            showToast("مرحبًا بك في لوحة تحكم MAZEN DESIGN");
+        }
+
+        document.getElementById("admin-login-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const pass = document.getElementById("admin-pass-input").value;
+            const err = document.getElementById("login-error-msg");
+            const fail = (m) => { err.textContent = m; err.classList.remove("hidden"); };
+            if (!db) return fail("السيرفر غير متصل. تأكد من رفع api.php وفتح الموقع من رابطه.");
+            try {
+                await api("login", { key: pass });
+                adminKey = pass;
+                err.classList.add("hidden");
+                grantAdminSession();
+                loadMessages();
+            } catch (ex) {
+                fail(ex.code === "http-401" ? "كلمة المرور غير صحيحة." : "تعذر الاتصال بالسيرفر.");
+            }
+        });
+
+        document.getElementById("back-to-site-btn").addEventListener("click", () => {
+            document.getElementById("admin-dashboard-view").classList.add("hidden");
+            document.getElementById("visitor-view").classList.remove("hidden");
+        });
+
+        document.getElementById("admin-logout-btn").addEventListener("click", () => {
+            state.isAdminAuthenticated = false;
+            adminKey = "";
+            state.messages = [];
+            document.getElementById("admin-dashboard-view").classList.add("hidden");
+            document.getElementById("visitor-view").classList.remove("hidden");
+            showToast("تم تسجيل الخروج من لوحة التحكم بأمان");
+        });
+
+        // Admin Tabs Switcher
+        document.querySelectorAll(".admin-tab-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".admin-tab-btn").forEach(b => {
+                    b.classList.remove("bg-skyElectric", "text-white");
+                    b.classList.add("glass-card");
+                });
+                btn.classList.add("bg-skyElectric", "text-white");
+                btn.classList.remove("glass-card");
+
+                const target = btn.getAttribute("data-admin-tab");
+                document.querySelectorAll(".admin-tab-panel").forEach(p => p.classList.add("hidden"));
+                document.getElementById(target).classList.remove("hidden");
+            });
+        });
+
+        // File Input Handler (Image Upload & Compression)
+        document.getElementById("proj-file-input").addEventListener("change", async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            document.getElementById("file-upload-status").textContent = "جاري معالجة الصورة وضغطها...";
+            const compressed = await compressImageFile(file);
+            state.uploadedImageBase64 = compressed;
+            const thumb = document.getElementById("proj-preview-thumb");
+            thumb.src = compressed;
+            thumb.classList.remove("hidden");
+            document.getElementById("file-upload-status").textContent = `تم تجهيز الصورة: ${file.name}`;
+        });
+
+        // Admin Add / Edit Project Form
+        document.getElementById("admin-project-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const editId = document.getElementById("edit-project-id").value;
+            const title = document.getElementById("proj-title-input").value.trim();
+            const category = document.getElementById("proj-cat-input").value;
+            const description = document.getElementById("proj-desc-input").value.trim();
+            const image = state.uploadedImageBase64 || createDesignSvg(title.slice(0, 14).toUpperCase(), category, "#0EA5E9", "#38BDF8", "MAZEN DESIGN");
+
+            const projId = editId || "proj_" + Date.now();
+            const projObj = { id: projId, title, category, description, image, createdAt: Date.now() };
+
+            // Reset active filters so the new project is immediately visible to everyone
+            state.activeCategory = "ALL";
+            state.searchQuery = "";
+            const searchInput = document.getElementById("project-search");
+            if (searchInput) searchInput.value = "";
+
+            if (editId) {
+                const idx = state.projects.findIndex(x => x.id === editId);
+                if (idx > -1) state.projects[idx] = projObj;
+            } else {
+                state.projects.unshift(projObj);
+            }
+
+            renderCategories();
+            renderProjects();
+            renderAdminLists();
+
+            try {
+                const user = await ensureAuthReady();
+                if (db && user) {
+                    await setDoc(doc(db, 'artifacts', appId, 'public', 'data', 'portfolio_projects', projId), projObj);
+                }
+                syncToast(editId ? "تم تحديث المشروع ونشره للجميع بنجاح" : "تم نشر المشروع الجديد للجميع بنجاح");
+            } catch (err) {
+                console.error("Cloud save error:", err);
+                showToast("حدث خطأ أثناء الرفع السحابي، حاول بصورة أصغر حجمًا", "error");
+            }
+
+            e.target.reset();
+            document.getElementById("edit-project-id").value = "";
+            document.getElementById("project-form-heading").textContent = "إضافة مشروع جديد إلى المعرض";
+            document.getElementById("cancel-edit-project").classList.add("hidden");
+            document.getElementById("proj-preview-thumb").classList.add("hidden");
+            document.getElementById("file-upload-status").textContent = "لم يتم اختيار ملف جديد (يتم ضغط الصورة تلقائيًا للحفظ السريع)";
+            state.uploadedImageBase64 = "";
+        });
+
+        document.getElementById("cancel-edit-project").addEventListener("click", () => {
+            document.getElementById("admin-project-form").reset();
+            document.getElementById("edit-project-id").value = "";
+            document.getElementById("project-form-heading").textContent = "إضافة مشروع جديد إلى المعرض";
+            document.getElementById("cancel-edit-project").classList.add("hidden");
+            document.getElementById("proj-preview-thumb").classList.add("hidden");
+            state.uploadedImageBase64 = "";
+        });
+
+        // Admin Add Category
+        document.getElementById("admin-category-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const val = document.getElementById("new-category-input").value.trim();
+            if (val && !state.categories.includes(val)) {
+                state.categories.push(val);
+                await saveMetaToFirebase();
+                renderCategories();
+                renderAdminLists();
+                e.target.reset();
+                syncToast("تمت إضافة التصنيف الجديد");
+            }
+        });
+
+        // Admin Add Service
+        document.getElementById("admin-service-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const srvObj = {
+                id: "srv_" + Date.now(),
+                title: document.getElementById("srv-title-input").value.trim(),
+                icon: document.getElementById("srv-icon-input").value.trim() || "fa-solid fa-wand-magic-sparkles",
+                desc: document.getElementById("srv-desc-input").value.trim()
+            };
+            state.services.push(srvObj);
+            renderServices();
+            renderAdminLists();
+            const user = await ensureAuthReady();
+            if (db && user) {
+                await setDoc(doc(db, 'artifacts', appId, 'public', 'data', 'portfolio_services', srvObj.id), srvObj);
+            }
+            e.target.reset();
+            syncToast("تمت إضافة الخدمة الجديدة ونشرها للجميع");
+        });
+
+        // Admin Add Testimonial
+        document.getElementById("admin-testimonial-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const revObj = {
+                id: "rev_" + Date.now(),
+                name: document.getElementById("rev-name-input").value.trim(),
+                role: document.getElementById("rev-role-input").value.trim(),
+                stars: Number(document.getElementById("rev-stars-input").value),
+                text: document.getElementById("rev-text-input").value.trim()
+            };
+            state.testimonials.unshift(revObj);
+            renderTestimonials();
+            renderAdminLists();
+            const user = await ensureAuthReady();
+            if (db && user) {
+                await setDoc(doc(db, 'artifacts', appId, 'public', 'data', 'portfolio_testimonials', revObj.id), revObj);
+            }
+            e.target.reset();
+            syncToast("تم نشر تقييم العميل للجميع بنجاح");
+        });
+
+        // Admin Save Settings
+        document.getElementById("admin-settings-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            state.settings = {
+                ...state.settings,
+                heroHeadline: document.getElementById("set-hero-headline").value.trim(),
+                heroBadge: document.getElementById("set-hero-badge").value.trim(),
+                heroBio: document.getElementById("set-hero-bio").value.trim(),
+                aboutDesc: document.getElementById("set-about-desc").value.trim(),
+                phone: document.getElementById("set-phone").value.trim(),
+                email: document.getElementById("set-email").value.trim(),
+                behance: document.getElementById("set-behance").value.trim(),
+                instagram: document.getElementById("set-instagram").value.trim()
+            };
+            await saveMetaToFirebase();
+            renderSettings();
+            syncToast("تم حفظ إعدادات الموقع والمحتوى بنجاح");
+        });
+
+        // -------------------- 8. HERO INTERACTIVE PARTICLE CANVAS --------------------
+        function initHeroCanvas() {
+            const canvas = document.getElementById("hero-canvas");
+            const ctx = canvas.getContext("2d");
+            let particles = [];
+            let w, h;
+
+            function resize() {
+                w = canvas.width = canvas.offsetWidth;
+                h = canvas.height = canvas.offsetHeight;
+                particles = Array.from({ length: Math.min(55, Math.floor(w / 24)) }, () => ({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6,
+                    r: Math.random() * 2.2 + 1
+                }));
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, w, h);
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.x < 0 || p.x > w) p.vx *= -1;
+                    if (p.y < 0 || p.y > h) p.vy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = "rgba(14, 165, 233, 0.65)";
+                    ctx.fill();
+
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const p2 = particles[j];
+                        const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                        if (dist < 130) {
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.strokeStyle = `rgba(56, 189, 248, ${0.18 * (1 - dist / 130)})`;
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(draw);
+            }
+
+            window.addEventListener("resize", resize);
+            resize();
+            draw();
+        }
+
+        // -------------------- 9. MAZEN AI CHAT --------------------
+        const aiHistory = [];
+
+        function aiLocalReply(q) {
+            const ar = /[\u0600-\u06FF]/.test(q) || state.lang === "ar";
+            const s = state.settings;
+            const wa = { label: ar ? "كلّم مازن على واتساب" : "Chat with Mazen on WhatsApp", href: `https://wa.me/${s.phone.replace(/^0/, "20")}` };
+            const t = q.toLowerCase();
+            const is = (re) => re.test(t);
+            const T = (a, e) => (ar ? a : e);
+
+            if (is(/(شكرا|شكرًا|thanks|thank you)/)) return { text: T("العفو! لو محتاج أي حاجة تانية أنا هنا.", "You're welcome! Ask me anything else.") };
+            if (is(/(مرحب|اهلا|أهلا|سلام|هاي|\b(hi|hello|hey)\b)/)) return { text: T("أهلًا بيك! أنا Mazen AI، مساعد مازن. اسألني عن الخدمات أو الأعمال أو طريقة التواصل.", "Hi! I'm Mazen AI, Mazen's assistant. Ask about services, projects, or how to get in touch.") };
+            if (is(/(سعر|اسعار|أسعار|تكلف|بكام|كام|price|cost|quote|how much)/)) return { text: T("السعر بيتحدد حسب نوع التصميم وحجمه وعدد التعديلات. ابعت تفاصيل مشروعك لمازن وهيرد عليك بعرض سعر واضح.", "Pricing depends on the type, scope and revisions. Send Mazen your project details and he'll reply with a clear quote."), action: wa };
+            if (is(/(واتس|رقم|تليفون|موبايل|ايميل|إيميل|تواصل|contact|phone|email|whatsapp|reach)/)) return { text: T(`تقدر تتواصل مع مازن على:\nالهاتف: ${s.phone}\nالبريد: ${s.email}`, `You can reach Mazen at:\nPhone: ${s.phone}\nEmail: ${s.email}`), action: wa };
+            if (is(/(مدة|امتى|متى|ميعاد|سريع|deadline|how long|delivery|turnaround)/)) return { text: T("المدة بتختلف حسب حجم المشروع. اكتب تفاصيلك والميعاد المطلوب في نموذج التواصل أو على واتساب ومازن هيأكد لك.", "Timing depends on the project. Share your details and deadline via the form or WhatsApp and Mazen will confirm."), action: wa };
+            if (is(/(شعار|لوجو|هوية|logo|brand)/)) return { text: T("مازن بيصمم شعارات وهويات بصرية كاملة (ألوان، خطوط، مطبوعات رسمية). شوف أمثلة في قسم أعمالي.", "Mazen designs logos and full visual identities (colors, typography, stationery). See examples in the projects section."), action: { label: T("شاهد الأعمال", "View work"), scroll: "#projects" } };
+            if (is(/(غلاف|كتاب|مذكر|book|cover|notes)/)) return { text: T("بيصمم أغلفة كتب ومذكرات تعليمية جاهزة للطباعة، وجه وظهر وكعب.", "He designs print-ready book and study-notes covers, including front, back and spine."), action: { label: T("شاهد الأعمال", "View work"), scroll: "#projects" } };
+            if (is(/(اعلان|إعلان|سوشيال|بوست|social|\bads?\b)/)) return { text: T("بيعمل تصميمات إعلانات وبوستات سوشيال ميديا لانستجرام وفيسبوك.", "He creates ad and social media designs for Instagram and Facebook."), action: wa };
+            if (is(/(خدم|بتعمل|بتصمم|service|offer|what do you)/)) return { text: T("الخدمات المتاحة:\n", "Available services:\n") + state.services.map(x => "• " + x.title).join("\n"), action: { label: T("شاهد الخدمات", "View services"), scroll: "#services" } };
+            if (is(/(اعمال|أعمال|مشاريع|نماذج|portfolio|project|work|sample)/)) return { text: T("تصنيفات الأعمال:\n", "Work categories:\n") + state.categories.map(x => "• " + x).join("\n"), action: { label: T("شاهد الأعمال", "View work"), scroll: "#projects" } };
+            if (is(/(مين|مازن|عن |who|about)/)) return { text: s.aboutDesc.length > 220 ? s.aboutDesc.slice(0, 217) + "..." : s.aboutDesc };
+            return { text: T("ممكن أساعدك في الخدمات، الأعمال، الأسعار أو التواصل. ولو سؤالك تفصيلي كلّم مازن مباشرة.", "I can help with services, projects, pricing or contact. For detailed questions, talk to Mazen directly."), action: wa };
+        }
+
+        async function aiReply(q) {
+            if (MAZEN_AI_ENDPOINT) {
+                try {
+                    const r = await fetch(MAZEN_AI_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ message: q, history: aiHistory.slice(-8), lang: state.lang }) });
+                    const d = await r.json();
+                    if (d && d.reply) return { text: String(d.reply) };
+                } catch (e) { console.warn("Mazen AI endpoint failed, using built-in replies"); }
+            }
+            return aiLocalReply(q);
+        }
+
+        function aiAdd(role, text, action) {
+            const log = document.getElementById("ai-chat-log");
+            const bubble = document.createElement("div");
+            bubble.className = "w-fit max-w-[85%] px-4 py-2.5 rounded-2xl whitespace-pre-line leading-relaxed " +
+                (role === "user" ? "ms-auto bg-skyElectric text-white" : "me-auto bg-slate-100 dark:bg-white/10");
+            bubble.textContent = text;
+            if (action) {
+                const btn = document.createElement(action.href ? "a" : "button");
+                btn.className = "mt-2 block px-3 py-1.5 rounded-lg bg-skyElectric text-white text-xs font-bold text-center";
+                btn.textContent = action.label;
+                if (action.href) { btn.href = action.href; btn.target = "_blank"; btn.rel = "noopener noreferrer"; }
+                else btn.addEventListener("click", () => {
+                    document.getElementById("ai-chat-panel").classList.add("hidden");
+                    document.querySelector(action.scroll)?.scrollIntoView({ behavior: "smooth" });
+                });
+                bubble.appendChild(btn);
+            }
+            log.appendChild(bubble);
+            log.scrollTop = log.scrollHeight;
+            return bubble;
+        }
+
+        async function aiSend(text) {
+            text = text.trim();
+            if (!text) return;
+            aiAdd("user", text);
+            aiHistory.push({ role: "user", content: text });
+            const typing = aiAdd("bot", "...");
+            const res = await aiReply(text);
+            typing.remove();
+            aiAdd("bot", res.text, res.action);
+            aiHistory.push({ role: "assistant", content: res.text });
+        }
+
+        (function initAiChat() {
+            const panel = document.getElementById("ai-chat-panel");
+            const input = document.getElementById("ai-chat-input");
+            let greeted = false;
+            const chips = ["الخدمات", "الأعمال", "الأسعار", "التواصل"];
+            document.getElementById("ai-chat-chips").innerHTML = chips.map(c => `<button type="button" class="ai-chip px-3 py-1.5 rounded-full text-xs font-bold glass-card hover:border-skyElectric whitespace-nowrap">${c}</button>`).join("");
+            document.querySelectorAll(".ai-chip").forEach(b => b.addEventListener("click", () => aiSend(b.textContent)));
+            document.getElementById("ai-chat-toggle").addEventListener("click", () => {
+                panel.classList.toggle("hidden");
+                if (!panel.classList.contains("hidden")) {
+                    if (!greeted) { greeted = true; aiAdd("bot", "أهلًا بيك! أنا Mazen AI، مساعد مازن. اسألني عن الخدمات أو الأعمال أو طريقة التواصل."); }
+                    input.focus();
+                }
+            });
+            document.getElementById("ai-chat-close").addEventListener("click", () => panel.classList.add("hidden"));
+            document.getElementById("ai-chat-form").addEventListener("submit", (e) => {
+                e.preventDefault();
+                const v = input.value;
+                input.value = "";
+                aiSend(v);
+            });
+        })();
+
+        // أي فشل حفظ غير متوقع (صلاحيات/اتصال) يظهر للمدير بدل ما يفشل بصمت
+        window.addEventListener("unhandledrejection", (ev) => {
+            const r = ev.reason || {};
+            if (String(r.code || "").startsWith("http-")) {
+                showToast("تعذر الحفظ في قاعدة البيانات: " + (r.code || r.message), "error");
+            }
+        });
+
+        // -------------------- 10. BOOTSTRAP APPLICATION --------------------
+        window.addEventListener("load", () => {
+            initHeroCanvas();
+            renderAll();
+            initFirebase();
+        });
+    </script>
+</body>
+</html>
